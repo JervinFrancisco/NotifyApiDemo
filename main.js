@@ -3,6 +3,7 @@ myHeaders.append("Content-type", "application/json");
 myHeaders.append("Access-Control-Allow-Origin", "*");
 myHeaders.append("Access-Control-Allow-Methods", "DELETE, POST, GET, OPTIONS");
 myHeaders.append("Access-Control-Allow-Headers", "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+myHeaders.append("Access-Control-Allow-Credentials", "true");
 myHeaders.append("Authorization", "ApiKey-v1 b459dc53-08e5-4923-8c68-ec0a5a344978");
 
 var raw = JSON.stringify({
@@ -14,8 +15,7 @@ var requestOptions = {
   method: 'POST',
   headers: myHeaders,
   body: raw,
-  redirect: 'follow',
-  mode: 'cors'
+  redirect: 'follow'
 };
 
 
